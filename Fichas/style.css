@@ -1,0 +1,23 @@
+#form{
+    padding: 10px;
+}
+
+#habs input{
+    text-align: center;
+}
+
+.bonus{
+    width: 40%;
+}
+
+.noresize{
+    resize: none;
+}
+
+#xp{
+    margin-bottom: 15px;
+}
+
+.void{
+    border: 1px solid transparent;
+}
