@@ -336,7 +336,7 @@
 
         <div class="form-row">
             <div class="form-group col-md-3">
-                <label for="exampleFormControlTextarea1">Traços de Perçonalidade</label>
+                <label for="exampleFormControlTextarea1">Traços de Personalidade</label>
                 <textarea class="form-control noresize style-1" rows="5"></textarea>
             </div>
             <div class="form-group col-md-3">
@@ -364,8 +364,6 @@
                                 class="btn btn-danger btnRemone">Remover</button></li>
                     </div>
                 </ul>
-                <!--<input type="text" id="textoAtck" class="form-control"
-                    placeholder="Nome, Bônus, Dano, Tipo e Descrição"></input>-->
                 <div class="input-group">
                     <input type="text" id="AttackNome" class="form-control" placeholder="Nome">
                     <input type="text" id="AttackBonus" class="form-control" placeholder="Bônus">
@@ -403,20 +401,98 @@
                                 accusamus labore sustainable VHS.
                             </div>
                         </div>
-                    </div><!--Fim Card modelo-->
+                    </div>
+                    <!--Fim Card modelo-->
 
-                </div><!--Fim da Sanfona-->
+                </div>
+                <!--Fim da Sanfona-->
                 <input type="text" id="textoMagia" class="form-control" placeholder="Nome"></input>
-                <textarea class="form-control noresize style-1" id="txtMagia" rows="3" placeholder="Descrição"></textarea>
+                <textarea class="form-control noresize style-1" id="txtMagia" rows="3"
+                    placeholder="Descrição"></textarea>
                 <button id="addMagia" class="btn btn-primary">Adicionar Magia</button>
-            </div><!--Fim da coluna de Magias-->
+            </div>
+            <!--Fim da coluna de Magias-->
 
         </div>
         <!--Fim Row Ataques e Magias-->
 
-        <div class="form-row">
+        <br>
 
+        <div class="form-row">
+            <label>Características e habilidades</label>
+            <div class="col-md-12">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-raca-tab" data-toggle="tab" href="#nav-raca"
+                            role="tab" aria-controls="nav-raca" aria-selected="true">Raça</a>
+                        <a class="nav-item nav-link" id="nav-classe-tab" data-toggle="tab" href="#nav-classe" role="tab"
+                            aria-controls="nav-classe" aria-selected="false">Classe</a>
+                        <a class="nav-item nav-link" id="nav-antecedente-tab" data-toggle="tab" href="#nav-antecedente"
+                            role="tab" aria-controls="nav-antecedente" aria-selected="false">Antecedentes</a>
+                        <a class="nav-item nav-link" id="nav-idiomas-tab" data-toggle="tab" href="#nav-idiomas"
+                            role="tab" aria-controls="nav-idiomas" aria-selected="false">Idiomas e Outras
+                            Proeficiências</a>
+                        <a class="nav-item nav-link" id="nav-other1-tab" data-toggle="tab" href="#nav-other1" role="tab"
+                            aria-controls="nav-other1" aria-selected="false">Outros 1</a>
+                        <a class="nav-item nav-link" id="nav-other2-tab" data-toggle="tab" href="#nav-other2" role="tab"
+                            aria-controls="nav-other2" aria-selected="false">Outros 2</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-raca" role="tabpanel" aria-labelledby="nav-raca-tab">
+                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                    </div>
+                    <div class="tab-pane fade" id="nav-classe" role="tabpanel" aria-labelledby="nav-classe-tab">
+                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                    </div>
+                    <div class="tab-pane fade" id="nav-antecedente" role="tabpanel"
+                        aria-labelledby="nav-antecedente-tab">
+                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                    </div>
+                    <div class="tab-pane fade" id="nav-idiomas" role="tabpanel" aria-labelledby="nav-idiomas-tab">
+                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                    </div>
+                    <div class="tab-pane fade" id="nav-other1" role="tabpanel" aria-labelledby="nav-other1-tab">
+                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                    </div>
+                    <div class="tab-pane fade" id="nav-other2" role="tabpanel" aria-labelledby="nav-other2-tab">
+                        <textarea class="form-control noresize style-2" rows="8"></textarea>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!--Fim Row Características-->
+
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label>Equipamento</label>
+                <div class="form-inline">
+                    <label>PC</label>
+                    <input type="text" class="form-control money">
+                </div>
+                <div class="form-inline">
+                    <label>PP</label>
+                    <input type="text" class="form-control money">
+                </div>
+                <div class="form-inline">
+                    <label>PE</label>
+                    <input type="text" class="form-control money">
+                </div>
+                <div class="form-inline">
+                    <label>PO</label>
+                    <input type="text" id="PO" class="form-control money">
+                </div>
+                <div class="form-inline">
+                    <label>PL</label>
+                    <input type="text" class="form-control money">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <label style="color: transparent">Equipamento</label>
+                <textarea class="form-control noresize style-1" rows="8"></textarea>
+            </div>
+        </div>
+        <!--Fim Row Equipamento-->
 
     </div>
 
