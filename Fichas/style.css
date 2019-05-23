@@ -94,4 +94,11 @@ input{
     width: 70%;
 }
 
+.item{
+    height: 60px;
+}
+
+.removeAttack{
+    float: right;
+}
 /*-----Ataques-----*/
