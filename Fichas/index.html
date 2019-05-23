@@ -337,39 +337,86 @@
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Traços de Perçonalidade</label>
-                <textarea class="form-control noresize style-1" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" rows="5"></textarea>
             </div>
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Ideais</label>
-                <textarea class="form-control noresize style-1" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" rows="5"></textarea>
             </div>
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Ligações</label>
-                <textarea class="form-control noresize style-1" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" rows="5"></textarea>
             </div>
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Defeitos</label>
-                <textarea class="form-control noresize style-1" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" rows="5"></textarea>
             </div>
         </div>
         <!--Fim Row Antecedentes-->
 
         <div class="form-row">
+
             <div class="col-md-6">
                 <ul class="list-group">
                     <label>Ataques</label>
-                    <div id="ataques" class="style-1">
-                        <li class="list-group-item item oculto" id="itemBase"><span>Ataque</span><button class="btn btn-primary removeAttack">Remover</button></li>
+                    <div id="ataques" class="style-1 grupoAtaques">
+                        <li class="list-group-item item oculto" id="AtckBase"><span>Ataque</span><button
+                                class="btn btn-danger btnRemone">Remover</button></li>
                     </div>
                 </ul>
-                <input type="text" id="texto" class="form-control" placeholder="Nome, Bônus, Dano, Tipo e Descrição"></input>
+                <!--<input type="text" id="textoAtck" class="form-control"
+                    placeholder="Nome, Bônus, Dano, Tipo e Descrição"></input>-->
+                <div class="input-group">
+                    <input type="text" id="AttackNome" class="form-control" placeholder="Nome">
+                    <input type="text" id="AttackBonus" class="form-control" placeholder="Bônus">
+                    <input type="text" id="AttackDano" class="form-control" placeholder="Dano">
+                    <input type="text" id="AttackTipo" class="form-control" placeholder="Tipo">
+                </div>
                 <button id="addAttack" class="btn btn-primary">Adicionar Ataque</button>
             </div>
+
             <div class="col-md-6">
-                
-            </div>
+                <label>Magias</label>
+                <div class="accordion grupoAtaques style-1" id="accordionExample">
+
+                    <div class="card oculto item" id="MagiaBase">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button id="btnNomeMagia" class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Grupo de itens colapsável #1
+                                </button>
+                                <button id="btnRemoverMagia" class="btn btn-danger btnRemone">Remover</button>
+                            </h5>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div id="divDescricaoMagia" class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. 3 wolf moon officia aute, non alemanha 0 x 2 coreia do sul cupidatat skateboard
+                                dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                                sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div><!--Fim Card modelo-->
+
+                </div><!--Fim da Sanfona-->
+                <input type="text" id="textoMagia" class="form-control" placeholder="Nome"></input>
+                <textarea class="form-control noresize style-1" id="txtMagia" rows="3" placeholder="Descrição"></textarea>
+                <button id="addMagia" class="btn btn-primary">Adicionar Magia</button>
+            </div><!--Fim da coluna de Magias-->
+
         </div>
         <!--Fim Row Ataques e Magias-->
+
+        <div class="form-row">
+
+        </div>
 
     </div>
 
