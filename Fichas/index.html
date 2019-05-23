@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="HabXp.js"></script>
+    <script src="Atacks.js"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
         </a>
     </nav>
 
-    <form id="form">
+    <div id="form">
 
         <div class="form-row">
             <div class="form-group col-md-3">
@@ -48,7 +50,8 @@
                     <option>Caótico Malígno</option>
                 </select>
             </div>
-        </div><!--Fim Row Nome, Classe, Raça e Alinhamento-->
+        </div>
+        <!--Fim Row Nome, Classe, Raça e Alinhamento-->
 
         <div class="form-row" id="xp">
             <div class="form-group col-md-1">
@@ -57,74 +60,126 @@
             </div>
             <div class="form-group col-md-10">
                 <label>Experiência</label>
-                <input type="range" class="custom-range" value="0" id="xpBar"/>
+                <input type="range" class="custom-range " value="0" id="xpBar" />
             </div>
             <div class="form-group col-md-1">
                 <label>Xp Máx.</label>
                 <input type="text" class="form-control form-control-sm xp" id="xpMax" value="300">
             </div>
-        </div><!--Fim Row do XP-->
+        </div>
+        <!--Fim Row do XP-->
 
         <div class="form-row" id="habs">
             <div class="form-group col-md-2">
                 <label>Força</label>
-                <input type="text" class="form-control form-control-lg For" id="ForHab" value="10">
-                <input type="text" class="form-control form-control-sm" id="ForMod" readonly>
+                <input type="text" class="form-control form-control-lg For centro" id="ForHab" value="10">
+                <input type="text" class="form-control form-control-sm centro" id="ForMod" readonly>
             </div>
             <div class="form-group col-md-2">
                 <label>Destreza</label>
-                <input type="text" class="form-control form-control-lg Des" id="DesHab" value="10">
-                <input type="text" class="form-control form-control-sm" id="DesMod" readonly>
+                <input type="text" class="form-control form-control-lg Des centro" id="DesHab" value="10">
+                <input type="text" class="form-control form-control-sm centro" id="DesMod" readonly>
             </div>
             <div class="form-group col-md-2">
                 <label>Constituição</label>
-                <input type="text" class="form-control form-control-lg Con" id="ConHab" value="10">
-                <input type="text" class="form-control form-control-sm" id="ConMod" readonly>
+                <input type="text" class="form-control form-control-lg Con centro" id="ConHab" value="10">
+                <input type="text" class="form-control form-control-sm centro" id="ConMod" readonly>
             </div>
             <div class="form-group col-md-2">
                 <label>Inteligência</label>
-                <input type="text" class="form-control form-control-lg Int" id="IntHab" value="10">
-                <input type="text" class="form-control form-control-sm" id="IntMod" readonly>
+                <input type="text" class="form-control form-control-lg Int centro" id="IntHab" value="10">
+                <input type="text" class="form-control form-control-sm centro" id="IntMod" readonly>
             </div>
             <div class="form-group col-md-2">
                 <label>Sabedoria</label>
-                <input type="text" class="form-control form-control-lg Sab" id="SabHab" value="10">
-                <input type="text" class="form-control form-control-sm" id="SabMod" readonly>
+                <input type="text" class="form-control form-control-lg Sab centro" id="SabHab" value="10">
+                <input type="text" class="form-control form-control-sm centro" id="SabMod" readonly>
             </div>
             <div class="form-group col-md-2">
                 <label>Carisma</label>
-                <input type="text" class="form-control form-control-lg Car" id="CarHab" value="10">
-                <input type="text" class="form-control form-control-sm" id="CarMod" readonly>
+                <input type="text" class="form-control form-control-lg Car centro" id="CarHab" value="10">
+                <input type="text" class="form-control form-control-sm centro" id="CarMod" readonly>
             </div>
-        </div><!--Fim Row Habilidades-->
+        </div>
+        <!--Fim Row Habilidades-->
 
         <div class="form-row">
-            <div class="void col-md-1"></div>
-
-            <div class="form-group col-md-2">
-                <label>Bônus de Proeficiência</label>
-                <input type="text" class="form-control form-control-lg" id="bonus" value="0">
-            </div>
+            <div class="void col-md-2"></div>
             <div class="form-group col-md-2">
                 <label>Classe de Armadura</label>
-                <input type="text" class="form-control form-control-lg">
+                <input type="text" class="form-control form-control-lg" placeholder="10 + Des + Arm. + Escudo">
             </div>
-            <div class="form-group col-md-2">
-                <label>Iniciativa</label>
-                <input type="text" class="form-control form-control-lg">
+            <div class="form-group col-md-1">
+                <label>Proeficiência</label>
+                <input type="text" class="form-control form-control-lg centro" id="bonus" value="2">
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-md-1">
                 <label>Deslocamento</label>
-                <input type="text" class="form-control form-control-lg">
+                <input type="text" class="form-control form-control-lg centro">
+            </div>
+            <div class="form-group col-md-1">
+                <label>Inspiração</label>
+                <input type="text" class="form-control form-control-lg centro">
+            </div>
+            <div class="form-group col-md-1">
+                <label>Iniciativa</label>
+                <input type="text" class="form-control form-control-lg centro" placeholder="d20 + Des">
             </div>
             <div class="form-group col-md-2">
                 <label>Percepção Passiva</label>
-                <input type="text" class="form-control form-control-lg">
+                <input type="text" class="form-control form-control-lg" placeholder="10 + Percepção">
             </div>
-            <div class="void col-md-1">
+            <div class="void col-md-1"></div>
+        </div>
+        <!--Fim Row Bonus, CA, Iniciativa, Desloc, PVs-->
 
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label>Pontos de Vida Atuais</label>
+                <input type="text" class="form-control form-control-sm" placeholder="Pontos de Vida Totais">
+                <input type="text" class="form-control form-control">
             </div>
-        </div><!--Fim Row Bonus, CA, Iniciativa, Desloc, PVs-->
+            <div class="form-group col-md-3">
+                <label>Pontos de Vida Temporários</label>
+                <input type="text" class="form-control form-control-sm" placeholder="Duração do Efeito">
+                <input type="text" class="form-control form-control">
+            </div>
+            <div class="form-group col-md-3">
+                <label>Dados de Vida</label>
+                <input type="text" class="form-control form-control-sm" placeholder="Dados de Vida Totais">
+                <input type="text" class="form-control form-control">
+            </div>
+            <div class="form-group col-md-3">
+                <label>Testes Contra Morte</label>
+                <div id="morte">
+                    <div>
+                        <label>Sucessos: </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input sucesso" type="checkbox" id="inlineCheckbox1" value="opcao1">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input sucesso" type="checkbox" id="inlineCheckbox2" value="opcao2">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input sucesso" type="checkbox" id="inlineCheckbox3" value="opcao3">
+                        </div>
+                    </div>
+                    <div>
+                        <label>Fracassos: </label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="opcao1">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="opcao3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fim Row Vida-->
 
         <div class="form-row">
             <div class="form-group col-md-3">
@@ -164,22 +219,26 @@
                 <label>Perícias</label>
                 <div class="form-check des">
                     <input class="form-check-input perBox Des" type="checkbox" value="">
-                    <label class="form-check-label">Acrobacia <span class="badge badge-pill badge-success">Des</span></label>
+                    <label class="form-check-label">Acrobacia <span
+                            class="badge badge-pill badge-success">Des</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Des" readonly>
                 </div>
                 <div class="form-check int">
                     <input class="form-check-input perBox Int" type="checkbox" value="">
-                    <label class="form-check-label">Arcanismo <span class="badge badge-pill badge-warning">Int</span></label>
+                    <label class="form-check-label">Arcanismo <span
+                            class="badge badge-pill badge-warning">Int</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Int" readonly>
                 </div>
                 <div class="form-check for">
                     <input class="form-check-input perBox For" type="checkbox" value="">
-                    <label class="form-check-label">Atletismo <span class="badge badge-pill badge-danger">For</span></label>
+                    <label class="form-check-label">Atletismo <span
+                            class="badge badge-pill badge-danger">For</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias For" readonly>
                 </div>
                 <div class="form-check car">
                     <input class="form-check-input perBox Car" type="checkbox" value="">
-                    <label class="form-check-label">Atuação <span class="badge badge-pill badge-light">Car</span></label>
+                    <label class="form-check-label">Atuação <span
+                            class="badge badge-pill badge-light">Car</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Car" readonly>
                 </div>
                 <div class="form-check car">
@@ -189,7 +248,8 @@
                 </div>
                 <div class="form-check des">
                     <input class="form-check-input perBox Des" type="checkbox" value="">
-                    <label class="form-check-label">Furtividade <span class="badge badge-pill badge-success">Des</span></label>
+                    <label class="form-check-label">Furtividade <span
+                            class="badge badge-pill badge-success">Des</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Des" readonly>
                 </div>
             </div>
@@ -197,32 +257,38 @@
                 <label style="color: transparent">Perícias</label>
                 <div class="form-check int">
                     <input class="form-check-input perBox Int" type="checkbox" value="">
-                    <label class="form-check-label">História <span class="badge badge-pill badge-warning">Int</span></label>
+                    <label class="form-check-label">História <span
+                            class="badge badge-pill badge-warning">Int</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Int" readonly>
                 </div>
                 <div class="form-check car">
                     <input class="form-check-input perBox Car" type="checkbox" value="">
-                    <label class="form-check-label">Intimidação <span class="badge badge-pill badge-light">Car</span></label>
+                    <label class="form-check-label">Intimidação <span
+                            class="badge badge-pill badge-light">Car</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Car" readonly>
                 </div>
                 <div class="form-check sab">
                     <input class="form-check-input perBox Sab" type="checkbox" value="">
-                    <label class="form-check-label">Intuição <span class="badge badge-pill badge-primary">Sab</span></label>
+                    <label class="form-check-label">Intuição <span
+                            class="badge badge-pill badge-primary">Sab</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Sab" readonly>
                 </div>
                 <div class="form-check int">
                     <input class="form-check-input perBox Int" type="checkbox" value="">
-                    <label class="form-check-label">Investigação <span class="badge badge-pill badge-warning">Int</span></label>
+                    <label class="form-check-label">Investigação <span
+                            class="badge badge-pill badge-warning">Int</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Int" readonly>
                 </div>
                 <div class="form-check sab">
                     <input class="form-check-input perBox Sab" type="checkbox" value="">
-                    <label class="form-check-label">Lidar com Animais <span class="badge badge-pill badge-primary">Sab</span></label>
+                    <label class="form-check-label">Lidar com Animais <span
+                            class="badge badge-pill badge-primary">Sab</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Sab" readonly>
                 </div>
                 <div class="form-check sab">
                     <input class="form-check-input perBox Sab" type="checkbox" value="">
-                    <label class="form-check-label">Medicina <span class="badge badge-pill badge-primary">Sab</span></label>
+                    <label class="form-check-label">Medicina <span
+                            class="badge badge-pill badge-primary">Sab</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Sab" readonly>
                 </div>
             </div>
@@ -230,57 +296,79 @@
                 <label style="color: transparent">Perícias</label>
                 <div class="form-check int">
                     <input class="form-check-input perBox Int" type="checkbox" value="">
-                    <label class="form-check-label">Natureza <span class="badge badge-pill badge-warning">Int</span></label>
+                    <label class="form-check-label">Natureza <span
+                            class="badge badge-pill badge-warning">Int</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Int" readonly>
                 </div>
                 <div class="form-check sab">
                     <input class="form-check-input perBox Sab" type="checkbox" value="">
-                    <label class="form-check-label">Percepção <span class="badge badge-pill badge-primary">Sab</span></label>
+                    <label class="form-check-label">Percepção <span
+                            class="badge badge-pill badge-primary">Sab</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Sab" readonly>
                 </div>
                 <div class="form-check car">
                     <input class="form-check-input perBox Car" type="checkbox" value="">
-                    <label class="form-check-label">Persuasão <span class="badge badge-pill badge-light">Car</span></label>
+                    <label class="form-check-label">Persuasão <span
+                            class="badge badge-pill badge-light">Car</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Car" readonly>
                 </div>
                 <div class="form-check des">
                     <input class="form-check-input perBox Des" type="checkbox" value="">
-                    <label class="form-check-label">Prestidigitação <span class="badge badge-pill badge-success">Des</span></label>
+                    <label class="form-check-label">Prestidigitação <span
+                            class="badge badge-pill badge-success">Des</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Des" readonly>
                 </div>
                 <div class="form-check int">
                     <input class="form-check-input perBox Int" type="checkbox" value="">
-                    <label class="form-check-label">Religião <span class="badge badge-pill badge-warning">Int</span></label>
+                    <label class="form-check-label">Religião <span
+                            class="badge badge-pill badge-warning">Int</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Int" readonly>
                 </div>
                 <div class="form-check sab">
                     <input class="form-check-input perBox Sab" type="checkbox" value="">
-                    <label class="form-check-label">Sobrevivência <span class="badge badge-pill badge-primary">Sab</span></label>
+                    <label class="form-check-label">Sobrevivência <span
+                            class="badge badge-pill badge-primary">Sab</span></label>
                     <input type="text" class="form-control form-control-sm bonus pericias Sab" readonly>
                 </div>
             </div>
-        </div><!--Fim Row Testes e Perícias-->
+        </div>
+        <!--Fim Row Testes e Perícias-->
 
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Traços de Perçonalidade</label>
-                <textarea class="form-control noresize" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" id="exampleFormControlTextarea1" rows="5"></textarea>
             </div>
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Ideais</label>
-                <textarea class="form-control noresize" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" id="exampleFormControlTextarea1" rows="5"></textarea>
             </div>
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Ligações</label>
-                <textarea class="form-control noresize" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" id="exampleFormControlTextarea1" rows="5"></textarea>
             </div>
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Defeitos</label>
-                <textarea class="form-control noresize" id="exampleFormControlTextarea1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" id="exampleFormControlTextarea1" rows="5"></textarea>
             </div>
-        </div><!--Fim Row Antecedentes-->
-        
-    </form>
+        </div>
+        <!--Fim Row Antecedentes-->
+
+        <div class="form-row">
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <label>Ataques</label>
+                    <div id="ataques" class="style-1">
+                        <li class="list-group-item item oculto" id="itemBase">Ataque</li>
+                    </div>
+                </ul>
+                <input type="text" id="texto" class="form-control" placeholder="Nome, Bônus, Dano, Tipo e Descrição"></input>
+                <button id="addAttack" class="btn btn-primary">Adicionar Ataque</button>
+            </div>
+        </div>
+        <!--Fim Row Ataques e Magias-->
+
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -291,7 +379,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>
