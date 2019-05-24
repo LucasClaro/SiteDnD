@@ -132,3 +132,15 @@ button#btnNomeMagia{
 }
 
 /*-----Equipamento-----*/
+/*-----Aparêncoa e Lore--------*/
+img{
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+#ImgBorda{
+    background-color: #F5F5F5;
+    min-height: 400px   ;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+/*-----Aparêncoa e Lore--------*/
