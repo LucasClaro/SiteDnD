@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="HabXp.js"></script>
     <script src="Atacks.js"></script>
+    <script src="Aparencia.js"></script>
 </head>
 
 <body>
@@ -526,16 +527,19 @@
                 <input type="text" class="form-control" placeholder="Descrição dos cabelos do personagem">
             </div>
         </div>
-        <!--Fim Row-->
+        <!--Fim Row Descrição Básica-->
 
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label>Aparência do personagem</label>
-                <div id="ImgBorda"><img src="" alt="" width="100%" height="auto"></div>
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="customFile" accept="image/png, image/jpeg">
-                    <label class="custom-file-label" for="customFile">Choose file</label>
+                <div id="ImgBorda">
+                <img id="imgAparencia" class="imgUpada" src="" alt="" width="100%" height="auto">
+                    <input type='file' id="upload" onchange="readURL(this)" />
                 </div>
+            </div>
+            <div class="form-group col-md-8">
+                <label>História do Personagem</label>
+                <textarea id="historia" class="form-control noresize style-1" rows="8"></textarea>
             </div>
         </div>
 
