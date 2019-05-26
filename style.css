@@ -137,7 +137,7 @@ button#btnNomeMagia{
     border: 1px solid #ced4da;
     border-radius: 5px;
 }
-#ImgBorda{
+.ImgBorda{
     background-color: #F5F5F5;
     min-height: 208px;
     border: 1px solid #ced4da;
@@ -145,7 +145,10 @@ button#btnNomeMagia{
     position: relative;
     overflow: hidden;  
 }
-#upload{
+#imgSimbolo{
+    min-height: 214px;
+}
+#upload, #upload2{
     opacity: 0; 
     border: none;
     border-radius: 3px;

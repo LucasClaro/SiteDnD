@@ -490,7 +490,26 @@
             </div>
             <div class="col-md-9">
                 <label>Equipamento</label>
-                <textarea class="form-control noresize style-1" rows="8"></textarea>
+                <!-- <textarea class="form-control noresize style-1" rows="8"></textarea> -->
+                <nav>
+                    <div class="nav nav-tabs" role="tablist">
+                        <div class="tab-pane fade show active" id="nav-equip" role="tabpanel"
+                            aria-labelledby="nav-raca-tab">
+                            <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        </div>
+                        <div class="tab-pane fade" id="nav-tesouro" role="tabpanel" aria-labelledby="nav-classe-tab">
+                            <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        </div>
+                    </div>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="nav-raca" role="tabpanel" aria-labelledby="nav-raca-tab">
+                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                    </div>
+                    <div class="tab-pane fade" id="nav-classe" role="tabpanel" aria-labelledby="nav-classe-tab">
+                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                    </div>
+                </div>
             </div>
         </div>
         <!--Fim Row Equipamento-->
@@ -532,14 +551,30 @@
         <div class="form-row">
             <div class="form-group col-md-4">
                 <label>Aparência do personagem</label>
-                <div id="ImgBorda">
-                <img id="imgAparencia" class="imgUpada" src="" alt="" width="100%" height="auto">
+                <div id="BordaAparencia" class="ImgBorda">
+                    <img id="imgAparencia" class="imgUpada" src="" alt="" width="100%" height="auto">
                     <input type='file' id="upload" onchange="readURL(this)" />
                 </div>
             </div>
             <div class="form-group col-md-8">
                 <label>História do Personagem</label>
                 <textarea id="historia" class="form-control noresize style-1" rows="8"></textarea>
+            </div>
+        </div>
+        <!--Fim Row Aparência-->
+
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label>Aliados e Organizações</label>
+                <textarea id="aliados" class="form-control noresize style-1" rows="10"></textarea>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Símbolo</label>
+                <div id="BordaSimbolo" class="ImgBorda">
+                    <img id="imgSimbolo" class="imgUpada" src="" alt="" width="100%" height="auto">
+                    <input type='file' id="upload2" onchange="carregarURl(this)" />
+                </div>
+                <input type="text" class="form-control" placeholder="Nome">
             </div>
         </div>
 
