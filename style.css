@@ -96,7 +96,7 @@ hr{
     border-radius: 5px; 
 }
 #accordionExample{
-    height: 300px;
+    height: 470px;
 }
 
 .oculto{
@@ -114,6 +114,7 @@ li.item{
 
 .btnRemone{
     float: right;
+    margin-left: 10px; 
 }
 
 button#btnNomeMagia{
@@ -160,3 +161,8 @@ button#btnNomeMagia{
     height: 100%;
 }
 /*-----Aparêncoa e Lore--------*/
+/*-----Magias--------*/
+button#addMagia{
+    margin-bottom: 15px; 
+}
+/*-----Magias--------*/

@@ -1,6 +1,5 @@
 var Ataques = [];
 var Magias = [];
-var MagiasTxt = [];
 
 document.addEventListener("DOMContentLoaded", function(){
     document.querySelector("#addAttack").addEventListener("click", function(){
@@ -19,8 +18,19 @@ document.addEventListener("DOMContentLoaded", function(){
         const nome = document.querySelector("#textoMagia").value;
         const descricao = document.querySelector("#txtMagia").value;
 
-        Magias.push(nome);
-        MagiasTxt.push(descricao);
+        let item = new Object();
+        item.nome = nome;
+        item.descricao = descricao;
+        item.favorito = false;
+        
+        var guias = document.querySelectorAll("#nav-tabContent3 .fade");
+        for (let i = 0; i < guias.length; i++) {
+            if (guias[i].classList.contains("active")){
+                item.pai = guias[i].id;
+            }
+        }
+
+        Magias.push(item);
         AtualizarListaMagias();
     })
 
@@ -65,22 +75,27 @@ function AtualizarListaMagias(){
 
     for (let i = 0; i < Magias.length; i++){
         const cloneItem = document.querySelector("#MagiaBase").cloneNode(true);
-        const parent = document.querySelector("#accordionExample");
+        let busca =  "#" + Magias[i].pai + " > div";
+        const parent = document.querySelector(busca);
         parent.appendChild(cloneItem);
         cloneItem.classList.remove("oculto");
         cloneItem.id = 'magia-' + 1;
-        cloneItem.querySelector("#btnNomeMagia").textContent = Magias[i];
+        cloneItem.querySelector("#btnNomeMagia").textContent = Magias[i].nome;
         cloneItem.querySelector("#btnRemoverMagia").addEventListener("click", RemoverMagia);
-        cloneItem.querySelector("#divDescricaoMagia").textContent = MagiasTxt[i];
+        cloneItem.querySelector("#divDescricaoMagia").textContent = Magias[i].descricao;
         cloneItem.querySelector("#collapseOne").id = "collapse" + i;
         cloneItem.querySelector("#btnNomeMagia").dataset.target = "#collapse" + i;
         cloneItem.querySelector("#btnRemoverMagia").id = "btnM-" + i;
+
+        if(Magias[i].favorito){
+            const favoritos = 
+        }
+
     }
 }
 
 function RemoverMagia(e){    
     const identificador = parseInt(e.target.id.substring(5));
     Magias.splice(identificador, 1);
-    MagiasTxt.splice(identificador, 1);
     AtualizarListaMagias();
 }

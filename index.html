@@ -376,7 +376,7 @@
 
             <div class="col-md-6">
                 <label>Magias</label>
-                <div class="accordion grupoAtaques style-1" id="accordionExample">
+                <div class="accordion grupoAtaques style-1" id="accordionFav">
 
                     <div class="card oculto item" id="MagiaBase">
                         <div class="card-header" id="headingOne">
@@ -386,20 +386,14 @@
                                     Grupo de itens colapsável #1
                                 </button>
                                 <button id="btnRemoverMagia" class="btn btn-danger btnRemone">Remover</button>
+                                <button id="btnFavoritarMagia" class="btn btn-outline-warning btnRemone">Favoritar</button>
                             </h5>
                         </div>
 
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-parent="#accordionExample">
+                            data-parent="#accordionFav">
                             <div id="divDescricaoMagia" class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid. 3 wolf moon officia aute, non alemanha 0 x 2 coreia do sul cupidatat skateboard
-                                dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                                sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-                                Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
-                                accusamus labore sustainable VHS.
+                                Descrição da Magia
                             </div>
                         </div>
                     </div>
@@ -407,10 +401,10 @@
 
                 </div>
                 <!--Fim da Sanfona-->
-                <input type="text" id="textoMagia" class="form-control" placeholder="Nome"></input>
+                <!-- <input type="text" id="textoMagia" class="form-control" placeholder="Nome"></input>
                 <textarea class="form-control noresize style-1" id="txtMagia" rows="3"
                     placeholder="Descrição"></textarea>
-                <button id="addMagia" class="btn btn-primary">Adicionar Magia</button>
+                <button id="addMagia" class="btn btn-primary">Adicionar Magia</button> -->
             </div>
             <!--Fim da coluna de Magias-->
 
@@ -606,6 +600,14 @@
         <!--Fim Row Básico das magias-->
 
         <div class="form-row">
+            <label>Adicionar Magia</label>
+            <input type="text" id="textoMagia" class="form-control" placeholder="Nome"></input>
+            <textarea class="form-control noresize style-1" id="txtMagia" rows="3" placeholder="Descrição"></textarea>
+            <button id="addMagia" class="btn btn-primary">Adicionar Magia</button>
+        </div>
+        <!--Fim Row Add Magia-->
+
+        <div class="form-row">
             <div class="col-md-12">
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab3" role="tablist">
@@ -613,10 +615,10 @@
                             role="tab" aria-controls="nav-truque" aria-selected="true">Truques</a>
                         <a class="nav-item nav-link" id="nav-circ1-tab" data-toggle="tab" href="#nav-circ1" role="tab"
                             aria-controls="nav-circ1" aria-selected="false">1º Círculo</a>
-                        <a class="nav-item nav-link" id="nav-circ2-tab" data-toggle="tab" href="#nav-circ2"
-                            role="tab" aria-controls="nav-circ2" aria-selected="false">2º Círculo</a>
-                        <a class="nav-item nav-link" id="nav-circ3-tab" data-toggle="tab" href="#nav-circ3"
-                            role="tab" aria-controls="nav-circ3" aria-selected="false">3º Círculo</a>
+                        <a class="nav-item nav-link" id="nav-circ2-tab" data-toggle="tab" href="#nav-circ2" role="tab"
+                            aria-controls="nav-circ2" aria-selected="false">2º Círculo</a>
+                        <a class="nav-item nav-link" id="nav-circ3-tab" data-toggle="tab" href="#nav-circ3" role="tab"
+                            aria-controls="nav-circ3" aria-selected="false">3º Círculo</a>
                         <a class="nav-item nav-link" id="nav-circ4-tab" data-toggle="tab" href="#nav-circ4" role="tab"
                             aria-controls="nav-circ4" aria-selected="false">4º Círculo</a>
                         <a class="nav-item nav-link" id="nav-circ5-tab" data-toggle="tab" href="#nav-circ5" role="tab"
@@ -632,35 +634,38 @@
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent3">
-                    <div class="tab-pane fade show active" id="nav-truque" role="tabpanel" aria-labelledby="nav-truque-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                    <div class="tab-pane fade show active" id="nav-truque" role="tabpanel"
+                        aria-labelledby="nav-truque-tab">
+
+                        <div class="accordion grupoAtaques style-1" id="accordion0"></div>
+
                     </div>
                     <div class="tab-pane fade" id="nav-circ1" role="tabpanel" aria-labelledby="nav-circ1-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <div class="accordion grupoAtaques style-1" id="accordion1"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-circ2" role="tabpanel" aria-labelledby="nav-circ2-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <div class="accordion grupoAtaques style-1" id="accordion2"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-circ3" role="tabpanel" aria-labelledby="nav-circ3-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <div class="accordion grupoAtaques style-1" id="accordion3"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-circ4" role="tabpanel" aria-labelledby="nav-circ4-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <div class="accordion grupoAtaques style-1" id="accordion4"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-circ5" role="tabpanel" aria-labelledby="nav-circ5-tab">
-                        <textarea class="form-control noresize style-2" rows="8"></textarea>
+                        <div class="accordion grupoAtaques style-1" id="accordion5"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-circ6" role="tabpanel" aria-labelledby="nav-circ6-tab">
-                        <textarea class="form-control noresize style-2" rows="8"></textarea>
+                        <div class="accordion grupoAtaques style-1" id="accordion6"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-circ7" role="tabpanel" aria-labelledby="nav-circ7-tab">
-                        <textarea class="form-control noresize style-2" rows="8"></textarea>
+                        <div class="accordion grupoAtaques style-1" id="accordion7"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-circ8" role="tabpanel" aria-labelledby="nav-circ8-tab">
-                        <textarea class="form-control noresize style-2" rows="8"></textarea>
+                        <div class="accordion grupoAtaques style-1" id="accordion8"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-circ9" role="tabpanel" aria-labelledby="nav-circ9-tab">
-                        <textarea class="form-control noresize style-2" rows="8"></textarea>
+                        <div class="accordion grupoAtaques style-1" id="accordion9"></div>
                     </div>
                 </div>
             </div>
