@@ -11,15 +11,17 @@
     <script src="HabXp.js"></script>
     <script src="Atacks.js"></script>
     <script src="Aparencia.js"></script>
+    <script src="SaveLoad.js"></script>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
             <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
             Ficha D&D
         </a>
+        <button class="btn btn-danger btnRemone" id="Salvar">Salvar</button>
     </nav>
 
     <div id="form">
@@ -105,32 +107,31 @@
         <!--Fim Row Habilidades-->
 
         <div class="form-row">
-            <div class="void col-md-2"></div>
+            <div class="void col-lg-2"></div>
             <div class="form-group col-md-2">
                 <label>Classe de Armadura</label>
                 <input type="text" class="form-control form-control-lg" placeholder="10 + Des + Arm. + Escudo">
             </div>
-            <div class="form-group col-md-1">
+            <div class="form-group col-lg-1 col-md-2">
                 <label>Proeficiência</label>
                 <input type="text" class="form-control form-control-lg centro" id="bonus" value="2">
             </div>
-            <div class="form-group col-md-1">
+            <div class="form-group col-lg-1 col-md-2">
                 <label>Deslocamento</label>
                 <input type="text" class="form-control form-control-lg centro">
             </div>
-            <div class="form-group col-md-1">
+            <div class="form-group col-lg-1 col-md-2">
                 <label>Inspiração</label>
                 <input type="text" class="form-control form-control-lg centro">
             </div>
-            <div class="form-group col-md-1">
+            <div class="form-group col-lg-1 col-md-2">
                 <label>Iniciativa</label>
                 <input type="text" class="form-control form-control-lg centro" placeholder="d20 + Des">
             </div>
-            <div class="form-group col-md-2">
+            <div class="form-group col-mlg2 col-md-2">
                 <label>Percepção Passiva</label>
                 <input type="text" class="form-control form-control-lg" placeholder="10 + Percepção">
             </div>
-            <div class="void col-md-1"></div>
         </div>
         <!--Fim Row Bonus, CA, Iniciativa, Desloc, PVs-->
 
