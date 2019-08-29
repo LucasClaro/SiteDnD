@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         descricao += document.querySelector("#AttackNome").value;
         descricao += " ( " + document.querySelector("#AttackBonus").value + " ) ";
-        descricao += document.querySelector("#AttackDano").value + " - ";
+        descricao += document.querySelector("#AttackDano").value + " -> ";
         descricao += document.querySelector("#AttackTipo").value;
 
         Ataques.push(descricao);
@@ -52,6 +52,7 @@ function AtualizarListaAtaques() {
         cloneItem.classList.remove("oculto");
         cloneItem.id = 'attack-' + i;
         cloneItem.classList.add("current-item");
+        cloneItem.classList.add("atack");
         cloneItem.querySelector("span").textContent = Ataques[i];
         cloneItem.querySelector("button").id = 'btnA-' + i;
         cloneItem.querySelector("button").addEventListener("click", RemoverAttack);

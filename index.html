@@ -138,18 +138,18 @@
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label>Pontos de Vida Atuais</label>
-                <input type="text" class="form-control form-control-sm" placeholder="Pontos de Vida Totais">
-                <input type="text" class="form-control form-control">
+                <input type="text" class="form-control form-control-sm" placeholder="Pontos de Vida Totais" id="PVsAtual">
+                <input type="text" class="form-control form-control" id="PVsAtualNotes">
             </div>
             <div class="form-group col-md-3">
                 <label>Pontos de Vida Temporários</label>
-                <input type="text" class="form-control form-control-sm" placeholder="Duração do Efeito">
-                <input type="text" class="form-control form-control">
+                <input type="text" class="form-control form-control-sm" placeholder="Duração do Efeito" id="PVsTemp">
+                <input type="text" class="form-control form-control" id="PVsTempNotes">
             </div>
             <div class="form-group col-md-3">
                 <label>Dados de Vida</label>
-                <input type="text" class="form-control form-control-sm" placeholder="Dados de Vida Totais">
-                <input type="text" class="form-control form-control">
+                <input type="text" class="form-control form-control-sm" placeholder="Dados de Vida Totais" id="DadosVidaTot">
+                <input type="text" class="form-control form-control" id="DadosVidaNotes">
             </div>
             <div class="form-group col-md-3">
                 <label>Testes Contra Morte</label>
@@ -169,13 +169,13 @@
                     <div>
                         <label>Fracassos: </label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="opcao1">
+                            <input class="form-check-input fracasso" type="checkbox" id="inlineCheckbox1" value="opcao1">
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="opcao2">
+                            <input class="form-check-input fracasso" type="checkbox" id="inlineCheckbox2" value="opcao2">
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="opcao3">
+                            <input class="form-check-input fracasso" type="checkbox" id="inlineCheckbox3" value="opcao3">
                         </div>
                     </div>
                 </div>
@@ -187,32 +187,32 @@
             <div class="form-group col-md-3">
                 <label>Testes De Resistência</label>
                 <div class="form-check">
-                    <input class="form-check-input For" type="checkbox" value="" id="ForCheck">
+                    <input class="form-check-input For Hab" type="checkbox" value="" id="ForCheck">
                     <label class="form-check-label">Força</label>
                     <input type="text" class="form-control form-control-sm bonus For" id="ForTest" readonly>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input Des" type="checkbox" value="" id="DesCheck">
+                    <input class="form-check-input Des Hab" type="checkbox" value="" id="DesCheck">
                     <label class="form-check-label">Destreza</label>
                     <input type="text" class="form-control form-control-sm bonus Des" id="DesTest" readonly>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input Con" type="checkbox" value="" id="ConCheck">
+                    <input class="form-check-input Con Hab" type="checkbox" value="" id="ConCheck">
                     <label class="form-check-label">Constituição</label>
                     <input type="text" class="form-control form-control-sm bonus Con" id="ConTest" readonly>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input Int" type="checkbox" value="" id="IntCheck">
+                    <input class="form-check-input Int Hab" type="checkbox" value="" id="IntCheck">
                     <label class="form-check-label">Inteligência</label>
                     <input type="text" class="form-control form-control-sm bonus Int" id="IntTest" readonly>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input Sab" type="checkbox" value="" id="SabCheck">
+                    <input class="form-check-input Sab Hab" type="checkbox" value="" id="SabCheck">
                     <label class="form-check-label">Sabedoria</label>
                     <input type="text" class="form-control form-control-sm bonus Sab" id="SabTest" readonly>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input Car" type="checkbox" value="" id="CarCheck">
+                    <input class="form-check-input Car Hab" type="checkbox" value="" id="CarCheck">
                     <label class="form-check-label">Carisma</label>
                     <input type="text" class="form-control form-control-sm bonus Car" id="CarTest" readonly>
                 </div>
@@ -339,19 +339,19 @@
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Traços de Personalidade</label>
-                <textarea class="form-control noresize style-1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" rows="5" id="Persona"></textarea>
             </div>
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Ideais</label>
-                <textarea class="form-control noresize style-1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" rows="5" id="Ideais"></textarea>
             </div>
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Ligações</label>
-                <textarea class="form-control noresize style-1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" rows="5" id="Ligacoes"></textarea>
             </div>
             <div class="form-group col-md-3">
                 <label for="exampleFormControlTextarea1">Defeitos</label>
-                <textarea class="form-control noresize style-1" rows="5"></textarea>
+                <textarea class="form-control noresize style-1" rows="5" id="Defeitos"></textarea>
             </div>
         </div>
         <!--Fim Row Antecedentes-->
