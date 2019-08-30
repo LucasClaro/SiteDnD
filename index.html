@@ -436,23 +436,23 @@
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="nav-raca" role="tabpanel" aria-labelledby="nav-raca-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <textarea class="form-control noresize style-1" rows="8" id="RacaNotes"></textarea>
                     </div>
                     <div class="tab-pane fade" id="nav-classe" role="tabpanel" aria-labelledby="nav-classe-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <textarea class="form-control noresize style-1" rows="8" id="ClassNotes"></textarea>
                     </div>
                     <div class="tab-pane fade" id="nav-antecedente" role="tabpanel"
                         aria-labelledby="nav-antecedente-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <textarea class="form-control noresize style-1" rows="8" id="AntecedenteNotes"></textarea>
                     </div>
                     <div class="tab-pane fade" id="nav-idiomas" role="tabpanel" aria-labelledby="nav-idiomas-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <textarea class="form-control noresize style-1" rows="8" id="Proefs"></textarea>
                     </div>
                     <div class="tab-pane fade" id="nav-other1" role="tabpanel" aria-labelledby="nav-other1-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <textarea class="form-control noresize style-1" rows="8" id="Outros1"></textarea>
                     </div>
                     <div class="tab-pane fade" id="nav-other2" role="tabpanel" aria-labelledby="nav-other2-tab">
-                        <textarea class="form-control noresize style-2" rows="8"></textarea>
+                        <textarea class="form-control noresize style-1" rows="8" id="Outros2"></textarea>
                     </div>
                 </div>
             </div>
@@ -464,23 +464,23 @@
                 <label>Dinheiro</label>
                 <div class="form-inline">
                     <label>PC</label>
-                    <input type="text" class="form-control money" placeholder="Peças de Cobre">
+                    <input type="text" class="form-control money" placeholder="Peças de Cobre" id="Pc">
                 </div>
                 <div class="form-inline">
                     <label>PP</label>
-                    <input type="text" class="form-control money" placeholder="Peças de Prata">
+                    <input type="text" class="form-control money" placeholder="Peças de Prata" id="Pp">
                 </div>
                 <div class="form-inline">
                     <label>PE</label>
-                    <input type="text" class="form-control money" placeholder="Peças de Electro">
+                    <input type="text" class="form-control money" placeholder="Peças de Electro" id="Pe">
                 </div>
                 <div class="form-inline">
                     <label>PO</label>
-                    <input type="text" id="PO" class="form-control money" placeholder="Peças de Ouro">
+                    <input type="text" id="PO" class="form-control money" placeholder="Peças de Ouro" id="Po">
                 </div>
                 <div class="form-inline">
                     <label>PL</label>
-                    <input type="text" class="form-control money" placeholder="Peças de Platina">
+                    <input type="text" class="form-control money" placeholder="Peças de Platina" id="Pl">
                 </div>
             </div>
             <div class="col-md-9">
@@ -496,10 +496,10 @@
                 <div class="tab-content" id="nav-tabContent2">
                     <div class="tab-pane fade show active" id="nav-equip" role="tabpanel"
                         aria-labelledby="nav-equip-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <textarea class="form-control noresize style-1" rows="8" id="Equip"></textarea>
                     </div>
                     <div class="tab-pane fade" id="nav-tesouro" role="tabpanel" aria-labelledby="nav-tesouro-tab">
-                        <textarea class="form-control noresize style-1" rows="8"></textarea>
+                        <textarea class="form-control noresize style-1" rows="8" id="Tesouros"></textarea>
                     </div>
                 </div>
             </div>
@@ -511,7 +511,7 @@
         <div class="form-row">
             <div class="form-group col-md-12">
                 <label>Nome</label>
-                <input type="text" class="form-control" placeholder="Nome completo do personagem">
+                <input type="text" class="form-control" placeholder="Nome completo do personagem" id="NomeCompleto">
             </div>
             <div class="form-group col-md-4">
                 <label>Idade</label>

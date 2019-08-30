@@ -66,6 +66,24 @@ function montarObj(){
     Personagem.Defeitos = document.querySelector("#Defeitos").value;
 
     Personagem.Ataques = CalcAtac();
+
+    Personagem.RacaNotes = document.querySelector("#RacaNotes").value;
+    Personagem.ClassNotes = document.querySelector("#ClassNotes").value;
+    Personagem.AntecedenteNotes = document.querySelector("#AntecedenteNotes").value;
+    Personagem.Proefs = document.querySelector("#Proefs").value;
+    Personagem.Outros1 = document.querySelector("#Outros1").value;
+    Personagem.Outros2 = document.querySelector("#Outros2").value;
+
+    Personagem.PC = document.querySelector("#Pc").value;
+    Personagem.PP = document.querySelector("#Pp").value;
+    Personagem.PE = document.querySelector("#Pe").value;
+    Personagem.PO = document.querySelector("#Po").value;
+    Personagem.PL = document.querySelector("#Pl").value;
+
+    Personagem.Equip = document.querySelector("#Equip").value;
+    Personagem.Tesouro = document.querySelector("#Tesouro").value;
+
+    
     
     return JSON.stringify(Personagem);;
 
