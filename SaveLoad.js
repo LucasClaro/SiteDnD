@@ -83,6 +83,14 @@ function montarObj(){
     Personagem.Equip = document.querySelector("#Equip").value;
     Personagem.Tesouro = document.querySelector("#Tesouro").value;
 
+    Personagem.NomeCompleto = document.querySelector("#NomeCompleto").value;
+    Personagem.Idade = document.querySelector("#Idade").value;
+    Personagem.Altura = document.querySelector("#Altura").value;
+    Personagem.Peso = document.querySelector("#Peso").value;
+    Personagem.Olhos = document.querySelector("#Olhos").value;
+    Personagem.Pele = document.querySelector("#Pele").value;
+    Personagem.Cabelos = document.querySelector("#Cabelos").value;
+
     
     
     return JSON.stringify(Personagem);;
