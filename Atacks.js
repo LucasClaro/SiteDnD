@@ -81,6 +81,7 @@ function AtualizarListaMagias() {
         parent.appendChild(cloneItem);
         cloneItem.classList.remove("oculto");
         cloneItem.id = 'magia-' + i;
+        cloneItem.classList.add("magia");
         cloneItem.querySelector("#btnNomeMagia").textContent = Magias[i].nome;
         cloneItem.querySelector("#btnRemoverMagia").addEventListener("click", RemoverMagia);
         cloneItem.querySelector("#btnFavoritarMagia").addEventListener("click", FavoritarMagia);
@@ -123,4 +124,8 @@ function FavoritarMagia(e) {
     Magias[identificador].favorito = !Magias[identificador].favorito;
     
     AtualizarListaMagias();
+}
+
+function CalcMagias(){
+    return Magias;
 }

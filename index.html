@@ -566,7 +566,7 @@
                     <img id="imgSimbolo" class="imgUpada" src="" alt="" width="100%" height="auto">
                     <input type='file' id="upload2" onchange="carregarURl(this)" />
                 </div>
-                <input type="text" class="form-control" placeholder="Nome">
+                <input type="text" class="form-control" placeholder="Nome" id="NomeSimb">
             </div>
         </div>
         <!--Fim Row Lore-->
@@ -576,17 +576,17 @@
         <div class="form-row">
             <div class="form-group col-md-3">
                 <label>Classe de Conjurador</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" id="classeConj">
             </div>
             <div class="form-group col-md-3">
                 <label>Habilidade Chave</label>
-                <select class="form-control">
-                    <option>Força</option>
-                    <option>Destreza</option>
-                    <option>Constituição</option>
-                    <option>Inteligência</option>
-                    <option>Sabedoria</option>
-                    <option>Carisma</option>
+                <select class="form-control" id="habChave">
+                    <option value="1">Força</option>
+                    <option value="2">Destreza</option>
+                    <option value="3">Constituição</option>
+                    <option value="4">Inteligência</option>
+                    <option value="5">Sabedoria</option>
+                    <option value="6">Carisma</option>
                 </select>
             </div>
             <div class="form-group col-md-3">
