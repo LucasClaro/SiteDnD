@@ -77,7 +77,7 @@ function montarObj(){
     Personagem.PC = document.querySelector("#Pc").value;
     Personagem.PP = document.querySelector("#Pp").value;
     Personagem.PE = document.querySelector("#Pe").value;
-    Personagem.PO = document.querySelector("#Po").value;
+    //Personagem.PO = document.querySelector("#Po").value;
     Personagem.PL = document.querySelector("#Pl").value;
 
     Personagem.Equip = document.querySelector("#Equip").value;
