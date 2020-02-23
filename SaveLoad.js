@@ -81,7 +81,7 @@ function montarObj(){
     Personagem.PL = document.querySelector("#Pl").value;
 
     Personagem.Equip = document.querySelector("#Equip").value;
-    Personagem.Tesouro = document.querySelector("#Tesouro").value;
+    Personagem.Tesouro = document.querySelector("#Tesouros").value;
 
     Personagem.NomeCompleto = document.querySelector("#NomeCompleto").value;
     Personagem.Idade = document.querySelector("#Idade").value;
