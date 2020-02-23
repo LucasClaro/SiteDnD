@@ -94,11 +94,11 @@ function montarObj(){
     //Área reservada para salvar a imagem
 
     Personagem.historia = document.querySelector("#historia").value;
-    Personagem.aliados = document.querySelector("aliados").value;
-    Personagem.NomeSimb = document.querySelector("NomeSimb").value;
+    Personagem.aliados = document.querySelector("#aliados").value;
+    Personagem.NomeSimb = document.querySelector("#NomeSimb").value;
 
-    Personagem.classeConj = document.querySelector("classeConj").value;
-    Personagem.habChave = document.querySelector("habChave").value;
+    Personagem.classeConj = document.querySelector("#classeConj").value;
+    Personagem.habChave = document.querySelector("#habChave").value;
     //Personagem.Magias = 
     //Preciso descobrir como puxar a vetor de magias do outro arquivo
     
