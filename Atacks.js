@@ -101,7 +101,8 @@ function AtualizarListaMagias() {
             favoritos.appendChild(cloneFav);
             cloneFav.classList.remove("oculto");
             cloneFav.id = 'fav-' + i;
-            cloneFav.querySelector("#btnNomeMagia").textContent = Magias[i].nome;
+            let circ = parent.id.substring(9);
+            cloneFav.querySelector("#btnNomeMagia").textContent = Magias[i].nome + " (Círculo " + circ +")";
             cloneFav.querySelector("#btnRemoverMagia").classList.add("oculto");
             cloneFav.querySelector("#btnFavoritarMagia").classList.add("oculto");
             cloneFav.querySelector("#divDescricaoMagia").textContent = Magias[i].descricao;
