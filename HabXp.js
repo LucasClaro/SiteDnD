@@ -132,22 +132,28 @@ function attCar() {
     }
 }
 
+//Atualiza a barra xp quando o valor é mudado por texto
 function attXPTxt(){
-    let atual = document.querySelector("#xpAt");
-    let barra = document.querySelector("#xpBar");
-    let max = document.querySelector("#xpMax");
+    let atual = document.querySelector("#xpAt");//Guarda o xp Atual
+    let barra = document.querySelector("#xpBar");//Gurda a barra de xp
+    let max = document.querySelector("#xpMax");//Guarda o xp máx
 
+    //Busca o valor proporcional do xp atual na reta
+    //E atualiza a barra
     barra.value = map(parseInt(atual.value), 0, parseInt(max.value), 0, 100);
 }
 
+//Atualiza a barra xp quando o valor é mudado pela própria barra
 function attXPBar(){
-    let atual = document.querySelector("#xpAt");
-    let barra = document.querySelector("#xpBar");
-    let max = document.querySelector("#xpMax");
+    let atual = document.querySelector("#xpAt");//Guarda o xp Atual
+    let barra = document.querySelector("#xpBar");//Gurda a barra de xp
+    let max = document.querySelector("#xpMax");//Guarda o xp máx
 
+    //Busca o valor proporcional do xp da reta no intervalo entre 0 e o Xp Máx
     atual.value = Math.round(map(parseInt(barra.value), 1, 100, 0, parseInt(max.value))); 
 }
 
+//Define o valor proporcional de n no intervalo start1 até stop1 no novo intervalo
 function map(n, start1, stop1, start2, stop2){
     var newval = (n - start1) / (stop1 - start1) * (stop2 - start2) + start2;
     if (start2 < stop2) {
@@ -157,37 +163,45 @@ function map(n, start1, stop1, start2, stop2){
     }
 }
 
+//Define os eventos
 document.addEventListener("DOMContentLoaded", function(){
+    //Atualiza tudo relacionado a força
     document.querySelectorAll(".For").forEach(
         function(element) {
             element.addEventListener("change", attFor);
         }
     );
+    //Atualiza tudo relacionado a destreza
     document.querySelectorAll(".Des").forEach(
         function(element) {
             element.addEventListener("change", attDes);
         }
     );
+    //Atualiza tudo relacionado a constituição
     document.querySelectorAll(".Con").forEach(
         function(element) {
             element.addEventListener("change", attCon);
         }
     );
+    //Atualiza tudo relacionado a Inteligência
     document.querySelectorAll(".Int").forEach(
         function(element) {
             element.addEventListener("change", attInt);
         }
     );
+    //Atualiza tudo relacionado a Sabedoria
     document.querySelectorAll(".Sab").forEach(
         function(element) {
             element.addEventListener("change", attSab);
         }
     );
+    //Atualiza tudo relacionado a Carisma
     document.querySelectorAll(".Car").forEach(
         function(element) {
             element.addEventListener("change", attCar);
         }
     );
+    //Define todos os eventos anteriores pro campo do bônus de proeficiência
     document.querySelector("#bonus").addEventListener("change", attFor);
     document.querySelector("#bonus").addEventListener("change", attDes);
     document.querySelector("#bonus").addEventListener("change", attCon);
@@ -195,11 +209,13 @@ document.addEventListener("DOMContentLoaded", function(){
     document.querySelector("#bonus").addEventListener("change", attSab);
     document.querySelector("#bonus").addEventListener("change", attCar);
 
+    //Define o evento do xp nos campos de texto
     document.querySelectorAll(".xp").forEach(
         function(element) {
             element.addEventListener("change", attXPTxt);
         }
     );
 
+    //Define o evento do xp na barra de xp
     document.querySelector("#xpBar").addEventListener("change", attXPBar);
 })

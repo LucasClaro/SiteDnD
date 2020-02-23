@@ -1,8 +1,8 @@
 var Personagem = new Object();
 
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#Salvar").addEventListener("click", salvar);
-})
+})*/
 
 function salvar() {
     var xmltext = montarObj();
