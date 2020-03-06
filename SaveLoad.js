@@ -99,10 +99,10 @@ function montarObj(){
 
     Personagem.classeConj = document.querySelector("#classeConj").value;
     Personagem.habChave = document.querySelector("#habChave").value;
-    //Personagem.Magias = 
-    //Preciso descobrir como puxar a vetor de magias do outro arquivo
+    Personagem.Magias =  CalcMagias();
     
-    return JSON.stringify(Personagem);;
+    return JSON.stringify(Personagem);
+    //mongodb+srv://LucasClaro:<password>@sitednd-zx3mt.gcp.mongodb.net/test?retryWrites=true&w=majority
 
 }
 

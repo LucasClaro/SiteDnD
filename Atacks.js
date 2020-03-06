@@ -117,6 +117,7 @@ function AtualizarListaMagias() {
 function RemoverMagia(e) {
     const identificador = parseInt(e.target.id.substring(5));
     Magias.splice(identificador, 1);
+
     AtualizarListaMagias();
 }
 
@@ -127,6 +128,6 @@ function FavoritarMagia(e) {
     AtualizarListaMagias();
 }
 
-function CalcMagias(){
+window.CalcMagias = function(){
     return Magias;
 }
